@@ -52,13 +52,13 @@
 		collected through the Arduino. This data is formatted into an array so that each element corresponds to the reading of a single sensor. It is then transmitted wirelessly via bluetooth
 		to the pre-trained machine learning model, which classifies the posture. Pressure sensor data will be sent to the model periodically to be classified so
 		that any improper posture may be immediately detected.
-		<br></br>
+		<br>
 		&emsp;The classification model will be custom made for each user. In order to use the application, each user must create an account and go through a calibration phase where the user is told 
 		to sit in various postures. During calibration, sensor data is collected and sent to the server where it is used to train an unique classification model for the user. The model is then converted
 		to pmml file format, sent back to the application, and stored in the user's mobile device. In future uses of the application, the pmml file can be quickly loaded into a classifier in Java
 		that allows us to perform classification directly on the client side. We hope that this will reduce latency during classification and make it as real-time as possible since there would be
 		no delays from network requests.
-		<br></br>
+		<br>
 		&emsp;In the long term, the application will attempt to find patterns of bad posture in the data in order to suggest appropriate exercises to fix them. Users will have the ability to view historic 
 		posture data as well as analytic on that posture set. 
     </p>
@@ -82,6 +82,19 @@
       The training data for users is stored with the user id, the identified posture, the sensor data, and a
       timestamp of when the data was collected. The purpose of this database is to store and retrieve data for
       generating new models and updating preexisting models if requested.
+    </p>
+	
+	<h3 class="my-4">Physical Design</h3>
+	<div class="d-block mx-auto py-3" style="text-align: center;">
+      <img class="d-inline px-4 sensors" src="res/img/tech/chair1.PNG">
+    </div>
+    <p>
+		Our device will not be an entire chair, but a combination of a back and seat cushion that can be placed
+		on any chair. A back and seat cushion is more portable than an entire chair. Additionally, the cushions are ergonomically designed to promote better posture while being comfortable. Sensors will be placed on the
+		back and seat cushions such that they do not interfere with the user’s comfort, meeting our requirement of
+		being non-intrusive. The sensors will interface with an Arduino, which will read and organize all sensor readings into a format that
+		is easy to process by the application. The Arduino will be physically hidden in a compartment located
+		behind the seat cushion and below the back cushion, where this an unused gap between the cushions and the chair.
     </p>
     
 
@@ -112,7 +125,7 @@
 		where w<sub>j</sub> are posture specific vectors found by the training algorithm. In order to
 		classify an unseen observation f, the algorithm would select the most probable posture, i.e., select j such
 		that P(y = j | F = f) is maximized.
-		<br></br>
+		<br>
 		&emsp;The posture classification model will be built in Python and will primarily use the Scikit-learn
 		library. Using the data collected, logistic regression models are train and evaluated. K-fold cross-validation will be the
 		main method used to tune hyper-parameters and select the model with the best accuracy. In addition, the
