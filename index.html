@@ -38,6 +38,7 @@
 
     <h2 class="my-4">The System</h2>
     <p>
+      <img class="img-fluid d-block mx-auto py-4 sensors" src="res/img/tech/system.png" alt="Android logo">
       Sensors on chairs, collect data with esp32 and send over bluetooth to front end Android application...
     </p>
 
@@ -107,7 +108,7 @@
 		w<sup>T</sup> f = <span class="span_equation">&Sigma;</span> w<sub>l</sub>*f<sub>l</sub> is positive for feature values f = (f<sub>1</sub>,...,f<sub>m</sub>) from one posture, and negative for
 		the other. For k postures, logistic regression models the conditional likelihood of posture j, P(y = j | F = f)
 		given features F = f as:
-		<img class="img-fluid d-block mx-auto my-4" src="res/img/math/lr_equation.png" alt="LR Equation">
+		<img class="img-fluid d-block mx-auto my-4" src="res/img/math/lr_equation.PNG" alt="LR Equation">
 		where w<sub>j</sub> are posture specific vectors found by the training algorithm. In order to
 		classify an unseen observation f, the algorithm would select the most probable posture, i.e., select j such
 		that P(y = j | F = f) is maximized.
