@@ -17,9 +17,6 @@
 
   <body>
 
-  <header>
-    <img class="img-fluid d-block mx-auto" id="banner" src="res/img/logos/banner.png">
-  </header>
 
   <div id="about-content">
 
@@ -30,22 +27,6 @@
       The project was created during DATES for <a href="WEBSITE" target="_blank">HACKATHON</a>, an annual hackathon hosted by HOST.
     </p>
 
-    <a href="https://github.com/GITHUB_URL" target="_blank">
-      <img class="img-fluid d-block mx-auto company-logo my-5" src="res/img/tech/github.png" alt="GitHub logo" title="View the source code on GitHub">
-    </a>
-    
-    <!-- OR -->
-
-    <div class="d-block mx-auto py-4" style="text-align: center;">
-      <a href="https://github.com/GITHUB_URL" target="_blank">
-        <img class="d-inline px-4 company-logo" src="res/img/tech/github.png" alt="GitHub" title="View the source code on GitHub">
-      </a>
-      <a href="https://play.google.com/URL" target="_blank">
-        <img class="d-inline px-4 company-logo" src="res/img/tech/google-play.png" alt="Google Play" title="Download the app on Google Play">
-      </a>
-    </div>
-
-    <img class="img-fluid d-block mx-auto mb-5 pt-3" src="res/img/team/working.jpg" alt="Team picture">
 
     <hr>
 
@@ -54,18 +35,16 @@
       In the modern world, we spend most of our lives sitting. Be it for work, school, or recreation, the average person spends a large portion of their day sitting in front of computer. Employees with white color jobs typically spend nearly 8 hours a day in front of their computer at work. With the COVID-19 pandemic, the same can be said for students, who have been relegated to online classes taken from their desks at home. According to an analysis, published in the Journal of the American Medical Association, the average American spends over 6 hours a day sitting down, an increase from a similar study done in 2007. For teenagers ages 12 to 19, this number is even higher at 8 hours a day. Spending time sitting means more time where our seated posture matters. And unfortunately for us, our posture can have real effects on our health. Poor posture has been linked to headaches and neck pain, a decrease in shoulder mobility, and weakness in the abdominal and buttock muscles. Furthermore, poor posture can have negative impacts on the respiratory system. With time spent sitting rising, and the potential impacts of poor posture, we were motivated to create this project: a posture detecting chair.
     </p>
 
-    <h1 class="my-4">Solution</h1>
-    <p>
-      Our solution is...
-    </p>
 
     <h2 class="my-4">The System</h2>
     <p>
-      Description...
       Sensors on chairs, collect data with esp32 and send over bluetooth to front end Android application...
     </p>
 
     <h3 class="my-4">Front end: Android Application</h3>
+        <a href="https://www.android.com/" target="_blank">
+            <img class="img-fluid d-block mx-auto py-4 company-logo" src="res/img/tech/android.svg" alt="Android logo">
+        </a>
     <p>
 		&emsp;The mobile application on Android is written in Java using Android studio. The application will be used to offer both immediate and long term feedback to the user.
 		When the user assumes an improper posture, the app will produce a notification to alert the user to fix their posture. As the user sits on the cushions, pressure sensor data will be
@@ -84,9 +63,7 @@
     </p>
 
     <h3 class="my-4">Back end</h3>
-    <a href="https://www.android.com/" target="_blank">
-      <img class="img-fluid d-block mx-auto py-4 company-logo" src="res/img/tech/android.svg" alt="Android logo">
-    </a>
+
     <p>
       The back end server is written in Python and primarily interfaces with the frontend through the Flask library. The
       frontend sends HTTP requests which are received and processed by the backend which primarily serves as an
@@ -118,7 +95,6 @@
 
     <h3 class="py-3">Microprocessor Chip</h3>
     <div class="d-block mx-auto py-3" style="text-align: center;">
-    <img class="d-inline px-4 esp32" src="res/img/tech/esp32Espressif.png">
     </div>
     <p>
       The microprocessor chip we used was the ESP32-WROOM-32 module. The module has built in Bluetooth and WiFi capabilites, allowing for wireless transfer of sensor data to the Android application.
@@ -136,27 +112,21 @@
 		classify an unseen observation f, the algorithm would select the most probable posture, i.e., select j such
 		that P(y = j | F = f) is maximized.
 		<br></br>
-		&emsp;The posture classification model will be built in Python and will primarily use the Scikitlearn
+		&emsp;The posture classification model will be built in Python and will primarily use the Scikit-learn
 		library. Using the data collected, logistic regression models are train and evaluated. K-fold cross-validation will be the
 		main method used to tune hyper-parameters and select the model with the best accuracy. In addition, the
 		confusion matrix will be used for evaluation in order to ensure the occurrences of false positives are kept at a
 		minimum.
 	</p>
 
-    <h3 class="my-4">Physical Design</h3>
-    <a href="https://aws.amazon.com/" target="_blank">
-      <img class="img-fluid d-block mx-auto py-4 company-logo" src="res/img/tech/aws.png" alt="Amazon Web Services Logo">
-    </a>
-    <p>
-      To host the server, <a href="https://aws.amazon.com/" target="_blank"><strong>Amazon Web Services</strong></a> was chosen.
-    </p>
+
 
 
     <hr>
 
     <h1 class="my-4">About the Team</h1>
     <p></p>
-      The creators of this project are <a href="https://github.com/jleung51" target="_blank">Jeffrey Leung</a>...
+      The creators of this project are Junpeng Lu, Omar Thenmalai, Kevin Jiang, and Eric Xue.
     </p>
 
     <hr>
