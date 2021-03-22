@@ -88,7 +88,22 @@
       <img class="img-fluid d-block mx-auto py-4 company-logo" src="res/img/tech/android.svg" alt="Android logo">
     </a>
     <p>
-      The back end server...
+      The back end server is written in Python and primarily interfaces with the frontend through the Flask library. The
+      frontend sends HTTP requests which are received and processed by the backend which primarily serves as an
+      interface between the frontend and the stored data.
+      <br>
+      Data is stored in a MySQL database and is accessed by the backend through the SQLAlchemy library. Storage for
+      the user posture models is done by saving the generated models in a .pmml format and associating the file
+      name with the id of the user in the user data model database. The PMML format was chosen over a Python pickle
+      to allow for the usage of a Python generated classifier in an Android environment. When a request is made to
+      get the model for a user, the backend retrieves the file name from the database and sends the corresponding
+      PMML file located in server storage. Said request has a boolean flag to generate a new model which if set to
+      true, will generate a new model, overwrite the existing PMML file as well as the database entry, and then send
+      back the new model.
+      <br>
+      The training data for users is stored with the user id, the identified posture, the sensor data, and a
+      timestamp of when the data was collected. The purpose of this database is to store and retrieve data for
+      generating new models and updating preexisting models if requested.
     </p>
     
 
