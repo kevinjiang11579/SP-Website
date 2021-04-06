@@ -15,38 +15,98 @@
     <link rel="stylesheet" href="res/css/styles.css">
   </head>
 
+  <nav class='navbar navbar-default navbar-fixed-top'>
+	  <div class='container-fluid'>
+		  <ul class='nav navbar-nav'>
+			  <li id='top-link'>
+				 <a href='#top'>
+				   Top
+				  </a>
+				</li>
+			<li id='about-link'>
+			  <a href='#sec1'><!-- our menu is using anchor links to target the ID of the sections to jump to. #sec1 is the name of one of our fullscreen sections -->
+				Motivation
+			  </a>
+			</li>
+			<li id='projects-link'>
+			  <a href='#sec2'>
+				System Overview
+			  </a>
+			</li>
+			<li id='skills-link'>
+			  <a href='#sec3'>
+				Front end
+			  </a>
+			</li>
+			<li id='contact-link'>
+			  <a href='#sec4'>
+				Back end
+			  </a>
+			</li>
+			<li id='contact-link'>
+			  <a href='#sec5'>
+				Physical Design
+			  </a>
+			</li>
+			<li id='contact-link'>
+			  <a href='#sec6'>
+				Sensors
+			  </a>
+			</li>
+			<li id='contact-link'>
+			  <a href='#sec7'>
+				Microprocessor Chip
+			  </a>
+			</li>
+			<li id='contact-link'>
+			  <a href='#sec8'>
+				Classification Algorithm
+			  </a>
+			</li>
+			<li id='contact-link'>
+			  <a href='#sec9'>
+				Project Demo
+			  </a>
+			</li>
+		  </ul>
+	  </div>
+	</nav>
+  
   <body>
-
-	<header>
-		<img class="center" style="width:1280px" id="banner" src="res/img/logos/stock.png">
-		<br>
-		<h1 style="text-align:center"> POSChair </h1>
-	</header>
+	
+	<section id='top'>
+		<header>
+			<img class="center" style="width:1280px" id="banner" src="res/img/logos/stock.png">
+			<br>
+			<h1 style="text-align:center"> POSChair </h1>
+		</header>
+	</section>
 	
 
   <div id="about-content">
 
+    <hr>
+	<section id='sec1'>
+		<h2 class="my-4">Motivation</h2>
+		<p>
+			In the modern world, we spend most of our lives sitting. Be it for work, school, or recreation, the average person spends
+			a large portion of their day sitting in front of computer. Employees with white color jobs typically spend nearly 8 hours
+			a day in front of their computer at work. With the COVID-19 pandemic, the same can be said for students, who have been
+			relegated to online classes taken from their desks at home. According to an analysis, published in the Journal of the American
+			Medical Association, <b>the average American spends over 6 hours a day sitting down, an increase from a similar study done in 2007</b>.
+			For teenagers ages 12 to 19, this number is even higher at 8 hours a day.
+			<br><br>
+			Spending time sitting means more time where our seated
+			posture matters. And unfortunately for us, our posture can have real effects on our health. <b>Poor posture has been linked to
+			headaches and neck pain, a decrease in shoulder mobility, and weakness in the abdominal and buttock muscles</b>. Furthermore, poor
+			posture can have negative impacts on the respiratory system. With time spent sitting rising, and the potential impacts of poor
+			posture, we were motivated to create this project: a posture detecting chair.
+		</p>
+	</section>
 
     <hr>
 
-    <h2 class="my-4">Motivation</h2>
-    <p>
-        In the modern world, we spend most of our lives sitting. Be it for work, school, or recreation, the average person spends
-        a large portion of their day sitting in front of computer. Employees with white color jobs typically spend nearly 8 hours
-        a day in front of their computer at work. With the COVID-19 pandemic, the same can be said for students, who have been
-        relegated to online classes taken from their desks at home. According to an analysis, published in the Journal of the American
-        Medical Association, <b>the average American spends over 6 hours a day sitting down, an increase from a similar study done in 2007</b>.
-        For teenagers ages 12 to 19, this number is even higher at 8 hours a day.
-        <br><br>
-        Spending time sitting means more time where our seated
-        posture matters. And unfortunately for us, our posture can have real effects on our health. <b>Poor posture has been linked to
-        headaches and neck pain, a decrease in shoulder mobility, and weakness in the abdominal and buttock muscles</b>. Furthermore, poor
-        posture can have negative impacts on the respiratory system. With time spent sitting rising, and the potential impacts of poor
-        posture, we were motivated to create this project: a posture detecting chair.
-    </p>
-
-    <hr>
-
+	<section id='sec2'>
     <h2 class="my-4">System Overview</h2>
     <p>
         The system consists of three main blocks: 1) <b>The seat and backrest</b>, 2) <b>the mobile application</b>, and 3) <b>the server</b>
@@ -66,9 +126,11 @@
         unable to properly integrate the classifier into the Android application.
 
     </p>
+	</section>
 
     <hr>
 
+	<section id='sec3'>
     <h3 class="my-4">Front end: Android Application</h3>
         <a href="https://www.android.com/" target="_blank">
             <img class="img-fluid d-block mx-auto py-4 company-logo" src="res/img/tech/android.svg" alt="Android logo">
@@ -89,11 +151,12 @@
 		In the long term, the application will attempt to find patterns of bad posture in the data in order to suggest appropriate exercises to fix them. Users will have the ability to view historic
 		posture data as well as analytic on that posture set. 
     </p>
+	</section>
 
     <hr>
-
+	
+	<section id='sec4'>
     <h3 class="my-4">Back end</h3>
-
     <p>
       The back end server is written in Python and primarily interfaces with the frontend through Flask. The
       front end sends HTTP requests, which are received and processed by the backend.
@@ -111,9 +174,11 @@
       timestamp of when the data was collected. The purpose of this database is to store and retrieve data for
       generating new models and updating preexisting models if requested.
     </p>
+	</section>
 
     <hr>
 
+	<section id='sec5'>
 	<h3 class="my-4">Physical Design</h3>
 	<div class="d-block mx-auto py-3" style="text-align: center;">
       <img class="d-inline px-4 sensors" src="res/img/tech/chair1.PNG">
@@ -126,9 +191,11 @@
 		is easy to process by the application. The ESP32 is stored in a compartment located
 		behind the seat cushion and below the back cushion, where this an unused gap between the cushions and the chair.
     </p>
+	</section>
 
     <hr>
 
+	<section id='sec6'>
     <h3 class="py-3">Sensors</h3>
     <div class="d-block mx-auto py-3" style="text-align: center;">
       <img class="d-inline px-4 sensors" src="res/img/tech/SensorPic.PNG">
@@ -136,9 +203,11 @@
     <p>
       We created custom pressure sensors using a piezo-resistive mateiral called Velostat. For our conductors, wires were soldered to cooper tape, and one stirp of copper tape was placed on each side ofthe Velostat. Each side of the Velostat was then covered with aluminum foil, and regular tape was used to keep the aluminum foil, copper tape, and Velostat compressed against each other. Using this method, we can construct sensors of any size and of any number, which allow us to easily change the placement pattern of our sensor array if needed.
     </p>
+	</section>
 
     <hr>
 
+	<section id='sec7'>
     <h3 class="py-3">Microprocessor Chip</h3>
     <div class="d-block mx-auto py-3" style="text-align: center;">
 	    <img class="d-inline px-4 esp32" src="res/img/tech/esp32Espressif.png">
@@ -146,9 +215,11 @@
     <p>
       The microprocessor chip we used was the ESP32-WROOM-32 module. The module has built in Bluetooth and WiFi capabilites, allowing for wireless transfer of sensor data to the Android application.
     </p>
+	</section>
 
     <hr>
 
+	<section id='sec8'>
     <h3 class="my-4">Classification Algorithm</h3>
 	<p>
 		The machine learning algorithm used to classify the postures is logistic regression. Logistic regression is a classification technique which finds a linear decision boundary to separate multiple
@@ -166,9 +237,11 @@
 		confusion matrix will be used for evaluation in order to ensure the occurrences of false positives are kept at a
 		minimum.
 	</p>
+	</section>
 
     <hr>
 
+	<section id='sec9'>
     <h1 class="my-4">Project Demo</h1>
     <p>
       In this demo, we test out some common postures on our posture detecting chair to verify the accuracy of our system.
@@ -176,6 +249,7 @@
     <video width="640" height="360" controls>
     <source src="res/video/SeniorProject1215.mp4" type="video/mp4">
     </video>
+	</section>
 
     <hr>
 
